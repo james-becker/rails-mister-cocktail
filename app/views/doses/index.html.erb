@@ -1,0 +1,6 @@
+<h1>All Doses</h1>
+
+<ul>
+<% @doses.each do |d| %>
+  <li><%= link_to, d.name, dose_path(d) %></li>
+<% end %>
