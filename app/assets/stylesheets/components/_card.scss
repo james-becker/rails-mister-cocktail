@@ -1,0 +1,24 @@
+.card {
+  width: 320px;
+  height: 220px;
+  background: #3e3e3e;
+  border-radius: 0 10px 0 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888888;
+  border-top-color: #cc3333;
+  border-top-width: 7px;
+  margin: 5px 5px 5px 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.cocktail-ingredients {
+  padding: 3px;
+  color: #3e3e3e;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  background: #ffffff;
+  opacity: .8;
+}

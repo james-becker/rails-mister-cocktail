@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title_tag).blank? ? "My Blog" : yield(:title_tag) %></title>
+    <title><%= yield(:title_tag).blank? ? "Monsieur Cocktail" : yield(:title_tag) %></title>
 
     <%= csrf_meta_tags %>
 
@@ -13,7 +13,12 @@
 
   </head>
 
+  <%= render 'shared/navbar' %>
+
   <body>
     <%= yield %>
   </body>
+
+  <%= render 'shared/footer' %>
+
 </html>
