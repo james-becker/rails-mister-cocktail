@@ -44,6 +44,14 @@ gem 'autoprefixer-rails'
 # Security
 gem 'figaro'
 
+# Asset hosting
+gem 'cloudinary'
+
+# Carrierwave
+gem 'carrierwave', '~> 0.11.2'
+
+gem 'awesome_print'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

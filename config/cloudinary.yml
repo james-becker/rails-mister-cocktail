@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: jamsbec
+  api_key: '978125298677634'
+  api_secret: 1TqMYo0K5oDgDD8JAlqlXw6FWRw
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: jamsbec
+  api_key: '978125298677634'
+  api_secret: 1TqMYo0K5oDgDD8JAlqlXw6FWRw
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: jamsbec
+  api_key: '978125298677634'
+  api_secret: 1TqMYo0K5oDgDD8JAlqlXw6FWRw
+  enhance_image_tag: true
+  static_image_support: false
