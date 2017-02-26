@@ -3,5 +3,7 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= simple_fields_for :doses do |d_f| %>
+    <%= d_f.input :description %>
   <%= f.button :submit %>
 <% end %>

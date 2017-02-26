@@ -1,0 +1,34 @@
+.strike {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.jumbo-title {
+  z-index: 0;
+  position: relative;
+  /*display: inline-block;*/
+}
+
+.strike:before {
+  content: '';
+  border-bottom: .4em solid #D62939;
+  opacity: .8;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 66.6%;
+  z-index: -1;
+}
+
+.white-highlight {
+  background: #e3e3e3;
+  padding: 6px;
+  opacity: .8;
+}
+
+.title-quote {
+  position: absolute;
+  text-align: center;
+  top: 250px;
+}

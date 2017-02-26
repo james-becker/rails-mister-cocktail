@@ -1,10 +1,45 @@
-<h1>New Cocktail</h1>
+<div class='wrapper dark-bg'>
+<div class="container">
+<div class="col-xs-12 col-sm-offset-3 col-sm-6">
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
+<h2 class="strike">Cocktail Creator</h2>
+<br><br>
+<div class="form-box box-shadow">
+
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name %>Please enter a name for your cocktail.
+  <br>
+  <br>
+  <%= nested_form_for @cocktail do |c_f| %>
+
+  <%= c_f.label "Ingredients" %>
+
+
+
+    <%= c_f.fields_for :ingredients do |i_f| %>
+      <%= i_f.collection_select(:id, Ingredient.order('name ASC'), :id, :name) %>
+      <% @ingredient = Ingredient.find(822) %>
+
+        <%= i_f.fields_for :doses do |d_f| %>
+          @ <%= d_f.text_field :description, size: 5, value: "5ml" %>
+
+        <% end %>
+      <%= c_f.link_to_remove "Remove this ingredient" %>
+                <br>
+                <br>
+      <% end %>
+    <p> <%= c_f.link_to_add "Add an ingredient", :ingredients %></p>
+
+  <% end %>
+
+  <%= f.input :photo %>Please upload a photo. Photos must be under 1 MB.
+  <br>
+  <br>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
-<% end %>
 
-<%= render 'shared/newdose' %>
+  <%= f.button :submit, class: 'btn btn-strike btn-right' %>
+  <% end %>
+</div><!-- form-box -->
+</div><!-- column -->
+</div><!-- container -->
+</div><!-- wrapper -->

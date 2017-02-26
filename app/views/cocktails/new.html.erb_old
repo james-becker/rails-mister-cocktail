@@ -1,0 +1,24 @@
+<h1>New Cocktail</h1>
+
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= nested_form_for @cocktail do |nf| %>
+    <%= nf.fields_for :ingredients do |i_form| %>
+      <%= i_form.collection_select(:id, Ingredient.order('name ASC'), :id, :name) %>
+      <%= @ingredient = Ingredient.find(822) %>
+        <%= nested_form_for [@ingredient] do |nfi| %>
+          <%= nfi.fields_for :doses do |d_form| %>
+            <%= d_form.input :description %>
+          <% end %>
+        <% end %>
+
+
+
+      <%= i_form.link_to_remove "Remove this ingredient" %>
+    <% end %>
+<p> <%= nf.link_to_add "Add an ingredient", :ingredients %></p>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>

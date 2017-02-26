@@ -1,6 +1,7 @@
 
-<div class="title">
-  <h1>All Cocktails</h1>
+<div class="title" style="background-image: url('<%= image_path "sexy-girl-at-bar-counter.jpg" %>')">
+  <h1 class="jumbo-title strike white-highlight">All Cocktails</h1><br>
+  <p class="title-quote white-highlight"><em>you must be the cocktail you wish to see in the world</em> - Gandhi</p>
 </div>
 
 
@@ -8,10 +9,8 @@
     <div class="list-box">
 
       <% @cocktails.each do |c| %>
-        <div class='card'>
-        <%= cl_image_tag("mi2jlqow0l4fpdrvnhqk",
-          width: 400, height: 300, crop: :fill) %>
-          <%= link_to c.name, cocktail_path(c), { class: 'btn btn-danger' } %>
+        <div class='card' style="background-image: url('<%=c.photo%>');background-size:cover">
+          <%= link_to c.name, cocktail_path(c), { class: 'btn btn-strike' } %>
           <p class='cocktail-ingredients'>
             <% c.doses.each do |dose| %>
               <%= dose.ingredient.name %>

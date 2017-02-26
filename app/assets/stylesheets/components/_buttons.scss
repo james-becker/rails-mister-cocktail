@@ -1,0 +1,13 @@
+.btn-strike {
+  background-color: #e3e3e3;
+  content: '';
+  border-bottom: .4em solid #D62939;
+  z-index: -1;
+}
+
+.btn-right {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+}

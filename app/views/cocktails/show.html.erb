@@ -1,17 +1,19 @@
 <div class="wrapper">
   <div class="container">
-    <div class="rounded-box">
       <div class="title">
         <h1><%= @cocktail.name %></h1>
       </div>
+       <div class="list-box">
+
 
       <h4>Doses:</h4>
-
+      <div class="dose-box">
       <ul>
       <% @cocktail.doses.each do |dose| %>
         <li><%= dose.ingredient.name %> - <%= dose.description %></li>
       <% end %>
       </ul>
+      </div>
     </div>
   </div>
 </div>
